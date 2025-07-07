@@ -36,70 +36,31 @@ conda install python=3.9 ipykernel -y
 Install required packages from the requirements file
 
 ```bash
-conda install --file requirements.txt -y
+pip install --upgrade pip
+pip install -r requirements
 ```
-If you have an NVIDIA GPU with CUDA support installed (check with nvidia-smi). Then use the requirements_gpu.txt file instead. Note that there may be conflicts due to your version of CUDA. Installing this can a bit of a pain...
 
-### 4️⃣ Install additional required libraries
+> **Note:** the packages include `adversarial-robustness-toolbox` (ART): a library from IBM for creating and evaluating adversarial attacks and defenses.
+We focus on this library.
+
+## Recommended approach: using venv
+
+### Create and activate a new virtual environment
+We will create an environment named `adversarial`:
 
 ```bash
-conda install numpy opencv adversarial-robustness-toolbox matplotlib -y
-```
+python -m venv adversarial
+source ./adversarial/bin/activate
 
-> 💡 **Note:** `adversarial-robustness-toolbox` (ART) is a library from IBM for creating and evaluating adversarial attacks and defenses.
+### 3️⃣ Install packages
 
-### 5️⃣ Install extra packages via pip
-
-Some packages are only available on PyPI:
-
-```bash
-pip install tf_agents[reverb]
-```
-
----
-
-## 💡 Alternative approach: using venv
-
-If you prefer not to use conda, you can use Python’s built-in `venv` module.
-
-### 1️⃣ Create a new virtual environment
-
-```bash
-python3.9 -m venv adversarial_tf
-```
-
-> ✅ Replace `python3.9` with the path to your Python 3.9 interpreter if needed.
-
-### 2️⃣ Activate the environment
-
-* **On Linux or macOS:**
-
-```bash
-source adversarial_tf/bin/activate
-```
-
-* **On Windows (PowerShell):**
-
-```powershell
-.\adversarial_tf\Scripts\activate
-```
-
-### 3️⃣ Upgrade pip
+Install required packages from the requirements file
 
 ```bash
 pip install --upgrade pip
-```
+pip install -r requirements
 
-### 4️⃣ Install packages
-
-```bash
-pip install tensorflow==2.8.2 keras==2.8.0 ipykernel
-pip install numpy opencv-python adversarial-robustness-toolbox matplotlib tf_agents[reverb]
-```
-
----
-
-## ⚡ Check your installation
+## Check your installation
 
 Once installed, verify that you can import the main libraries:
 
@@ -114,22 +75,19 @@ import tensorflow as tf
 import keras
 import art
 import numpy
-import cv2
 import matplotlib
-import tf_agents
-print("All packages imported successfully! ✅")
 ```
 
 ---
 
-## 🎯 Final notes
+## Final notes
 
-* Always **activate your environment** before running code or notebooks.
+* Be careful to activate your environment before running code or notebooks.
 * Use `conda deactivate` (for conda) or `deactivate` (for venv) to exit the environment.
 * To create a Jupyter kernel for your environment (so it appears as an option in notebooks):
 
 ```bash
-python -m ipykernel install --user --name adversarial_tf --display-name "Python (adversarial_tf)"
+python -m ipykernel install --user --name adversarial_tf --display-name "Python (adversarial)"
 ```
 
 ---
@@ -140,6 +98,4 @@ python -m ipykernel install --user --name adversarial_tf --display-name "Python 
 * [TensorFlow installation guide](https://www.tensorflow.org/install)
 * [Conda documentation](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)
 
----
-
-Happy hacking and stay robust! 💻🛡️
+Enjoy the Summer School !
