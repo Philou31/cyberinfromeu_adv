@@ -5,6 +5,10 @@ Adversarial machine learning session: hands-on
 
 Welcome to this hands-on session on adversarial machine learning!
 
+## Data
+First, [download the data required for the hands-on (250MB), given as a python pickle file.](https://insatoulousefr-my.sharepoint.com/:u:/g/personal/leleux_insa-toulouse_fr/EUCHgBl7cztNj6gTlg0C6kcBhhoAzGckWTlxdqasQdjgNw?e=R7xfWU)
+This data was extracted from the CIFAR100 public dataset with super classes.
+
 ## Installation
 Here are instructions to install the Python libraries you will need for the session.
 
@@ -25,13 +29,13 @@ conda create -n adversarial python=3.9
 conda activate adversarial_tf
 ```
 
-### 3️⃣ Install python
+### Install python
 
 ```bash
 conda install python=3.9 ipykernel -y
 ```
 
-### 3️⃣ Install packages
+### Install packages
 
 Install required packages from the requirements file
 
@@ -52,7 +56,7 @@ We will create an environment named `adversarial`:
 python -m venv adversarial
 source ./adversarial/bin/activate
 
-### 3️⃣ Install packages
+### Install packages
 
 Install required packages from the requirements file
 
@@ -92,7 +96,7 @@ python -m ipykernel install --user --name adversarial_tf --display-name "Python 
 
 ---
 
-### 📄 References
+### References
 
 * [Adversarial Robustness Toolbox documentation](https://adversarial-robustness-toolbox.readthedocs.io/en/latest/)
 * [TensorFlow installation guide](https://www.tensorflow.org/install)
