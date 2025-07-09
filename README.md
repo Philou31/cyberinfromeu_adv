@@ -47,7 +47,7 @@ Install required packages from the requirements file
 
 ```bash
 pip install --upgrade pip
-pip install -r requirements
+pip install -r requirements.txt
 ```
 
 > **Note:** the packages include `adversarial-robustness-toolbox` (ART): a library from IBM for creating and evaluating adversarial attacks and defenses.
