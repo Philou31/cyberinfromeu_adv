@@ -9,6 +9,12 @@ Welcome to this hands-on session on adversarial machine learning!
 First, [download the data required for the hands-on (250MB), given as a python pickle file.](https://insatoulousefr-my.sharepoint.com/:u:/g/personal/leleux_insa-toulouse_fr/EUCHgBl7cztNj6gTlg0C6kcBhhoAzGckWTlxdqasQdjgNw?e=R7xfWU)
 This data was extracted from the CIFAR100 public dataset with super classes.
 
+## Practical session
+The main part of the hands-on is the notebook: 2025-07-09_FRomeu_hands-on-AML.ipynb.
+
+Since it could be a little long on the first part, I also give a version where this first part (preprocessing data, setting up classification model) is done.
+**You can choose where to start from**, since setting up the machine learning model can be good experience for some of you.
+
 ## Installation
 Here are instructions to install the Python libraries you will need for the session.
 
